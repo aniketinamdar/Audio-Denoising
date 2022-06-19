@@ -113,7 +113,9 @@ end
 if params.show_log
     fprintf('Saving output file to %s...\n', output_file);
 end
-audiowrite(output_audio, sr, output_file);
+%audiowrite(output_file, audio,sr );%
+%audiowrite("test/outputfile.wav",audio,sr);%
+audiowrite("test/outputfile.wav",output_audio,sr);% -->(white noise removed)
 
 end
 

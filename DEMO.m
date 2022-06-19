@@ -13,7 +13,7 @@ fprintf('Playing input file %s...\n', noisy_speech);
 sound(noisy_speech_signal,sr);
 
 fprintf('Denoising...\n');
-output_file = NMFdenoiser(noisy_speech,params);
+output_file = NMFdenoiser(noisy_speech, params);
 
 fprintf('Playing output file %s...\n', output_file);
 [denoised_speech_signal,sr] = audioread(output_file);
